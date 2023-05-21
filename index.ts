@@ -5,11 +5,11 @@ const router = new Router();
 const app = new Application();
 const contacts = [
   {
-    name: "venkatesh"
+    name: "sam"
     pronouns: "He/Him"
   },
   {
-    name: "smita"
+    name: "sally"
     pronouns: "she/her"
   },
 
