@@ -1,19 +1,14 @@
-import { Application, Router } from 'oak';
-import { oakCors } from 'cors';
-
+import { Application, Router } from 'https://deno.land/x/oak/mod.ts';
+import { oakCors } from 'https://deno.land/x/cors/mod.ts';
 
 const router = new Router();
 const app = new Application();
 
 app.use(async (ctx, next) => await routeMiddleware(ctx, next));
 
-router
-  .get("/contact", getAllContacts)
+router.get('/contact', getAllContacts);
 
-  
-app.use(
-  oakCors({ origin: "*", preflightContinue: true }),
-);
+app.use(oakCors({ origin: '*', preflightContinue: true }));
 app.use(router.routes());
 app.use(router.allowedMethods());
 
