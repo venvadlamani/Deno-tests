@@ -16,7 +16,7 @@ const contacts = [
 ]
 app.use(async (ctx, next) => await routeMiddleware(ctx, next));
 
-router.get('/contact', contacts);
+router.get('/', contacts);
 
 app.use(oakCors({ origin: '*', preflightContinue: true }));
 app.use(router.routes());
