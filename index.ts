@@ -14,10 +14,12 @@ const contacts = [
   },
 
 ]
-app.use(async (ctx, next) => await routeMiddleware(ctx, next));
+router.get('/', (context) => {
+  context.response.body = 'This is an example Oak server running on Edge Functions!'
+});
 
-router.get('/', contacts);
 
+// app.use(async (ctx, next) => await routeMiddleware(ctx, next));
 app.use(oakCors({ origin: '*', preflightContinue: true }));
 app.use(router.routes());
 app.use(router.allowedMethods());
