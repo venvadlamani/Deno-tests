@@ -1,3 +1,4 @@
 # Deno-tests
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/typescript-wxcnkr)
+- [deno deploy dashboard](https://dash.deno.com/projects)
+  [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/typescript-wxcnkr)
