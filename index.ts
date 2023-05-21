@@ -1,6 +1,3 @@
-// Import stylesheets
-import './style.css';
+import { serve } from 'https://deno.land/std@0.177.0/http/server.ts';
 
-// Write TypeScript code!
-const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
+serve((req: Request) => new Response('Hello World'));
